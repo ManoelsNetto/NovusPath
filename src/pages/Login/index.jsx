@@ -107,7 +107,7 @@ export default function Login() {
             )}
           </button>
 
-          <p className="text-center text-muted small mb-0">
+          <p className="text-center text-danger small mb-0">
 
             Não precisa de cadastro - apenas entre com qualquer email!
 

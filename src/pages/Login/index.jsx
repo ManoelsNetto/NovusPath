@@ -109,7 +109,7 @@ export default function Login() {
 
           <p className="text-center text-danger small mb-0">
 
-            Não precisa de cadastro - apenas entre com qualquer email!
+            Não precisa de cadastro - apenas entre com qualquer email e senha!
 
           </p>
         

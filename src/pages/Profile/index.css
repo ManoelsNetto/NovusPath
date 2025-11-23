@@ -1,0 +1,100 @@
+/* Profile.css */
+
+:root {
+  --bg-dark: #0f172a;
+}
+
+.profile-wrapper {
+  background-color: var(--bg-dark);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Avatar Container */
+.avatar-container {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  padding: 4px; /* Espaço para a borda */
+  background: linear-gradient(135deg, #6366f1, #a855f7); /* Borda gradiente */
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.4);
+  margin: 0 auto;
+}
+
+.avatar-inner {
+  width: 100%;
+  height: 100%;
+  background: #1e293b;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  color: white;
+}
+
+/* Inputs do Formulário (Glass) */
+.form-control-glass {
+  background: rgba(15, 23, 42, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: white !important;
+  backdrop-filter: blur(5px);
+}
+
+.form-control-glass:focus {
+  background: rgba(15, 23, 42, 0.8) !important;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+.form-control-glass:disabled {
+  background: rgba(255, 255, 255, 0.05) !important;
+  opacity: 0.7;
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Badges */
+.badge-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 15px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.badge-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-3px);
+}
+
+.badge-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin: 0 auto 10px;
+}
+
+/* Badges Bloqueados */
+.badge-locked {
+  opacity: 0.5;
+  filter: grayscale(1);
+  border-style: dashed;
+}
+
+/* Zona de Perigo */
+.danger-zone {
+  background: rgba(239, 68, 68, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 16px;
+}
+
+.danger-zone:hover {
+  background: rgba(239, 68, 68, 0.1);
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.1);
+}

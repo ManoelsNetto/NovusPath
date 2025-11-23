@@ -1,0 +1,83 @@
+/* Dashboard.css */
+
+:root {
+  --bg-dark: #0f172a;
+  --glass-panel: rgba(30, 41, 59, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --neon-blue: #6366f1;
+  --neon-purple: #a855f7;
+  --neon-cyan: #06b6d4;
+}
+
+.dashboard-wrapper {
+  background-color: var(--bg-dark);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Painéis de Vidro (Substitui os Cards padrões) */
+.glass-panel {
+  background: var(--glass-panel);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-panel:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.glass-panel-interactive:hover {
+  transform: translateY(-5px);
+  background: rgba(45, 55, 72, 0.8);
+  cursor: pointer;
+}
+
+/* Ícones com fundo brilhante */
+.icon-box {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* Barra de Progresso Neon */
+.progress-glass {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 8px;
+}
+
+.progress-bar-neon {
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-blue));
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+  border-radius: 10px;
+}
+
+/* Texto Gradiente */
+.text-gradient-title {
+  background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Cards Internos (Recomendações) */
+.inner-card {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  transition: all 0.2s;
+}
+
+.inner-card:hover {
+  background: rgba(255, 255, 255, 0.03);
+}

@@ -1,0 +1,89 @@
+/* Login.css */
+
+/* Reutilizando as variáveis para garantir consistência */
+:root {
+  --bg-body: #0f172a;
+  --glass-bg: rgba(30, 41, 59, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --primary-glow: #6366f1;
+}
+
+.login-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg-body);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card de Login Específico */
+.login-card {
+  width: 100%;
+  max-width: 450px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 10;
+}
+
+/* Inputs Customizados (Dark Glass) */
+.form-control-glass {
+  background-color: rgba(15, 23, 42, 0.6) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #e2e8f0 !important;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s ease;
+}
+
+.form-control-glass:focus {
+  background-color: rgba(15, 23, 42, 0.9) !important;
+  border-color: var(--primary-glow);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+.form-control-glass::placeholder {
+  color: #64748b;
+}
+
+/* Ícones dentro dos inputs */
+.input-icon-wrapper {
+  position: relative;
+}
+.input-icon-wrapper i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  z-index: 5;
+  transition: color 0.3s ease;
+}
+.input-icon-wrapper input {
+  padding-left: 45px; /* Espaço para o ícone */
+}
+.input-icon-wrapper:focus-within i {
+  color: var(--primary-glow);
+}
+
+/* Botão de Voltar flutuante */
+.btn-back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #94a3b8;
+  text-decoration: none;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+}
+.btn-back:hover {
+  color: white;
+}

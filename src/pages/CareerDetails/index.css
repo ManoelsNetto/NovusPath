@@ -1,0 +1,130 @@
+/* CareerDetails.css */
+:root {
+  --bg-dark: #0f172a;
+}
+
+.career-details-wrapper {
+  background-color: var(--bg-dark);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Gráfico de Salário CSS Puro */
+.salary-bar-container {
+  height: 8px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 4px;
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.salary-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #6366f1, #22c55e);
+  border-radius: 4px;
+  position: relative;
+}
+
+.salary-marker {
+  position: absolute;
+  top: -35px;
+  transform: translateX(-50%);
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  color: white;
+  white-space: nowrap;
+}
+
+.salary-marker::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 8px;
+  height: 8px;
+  background: inherit;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Roadmap Timeline */
+.roadmap-item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 25px;
+}
+
+.roadmap-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--bg-dark);
+  border: 2px solid #64748b;
+  z-index: 2;
+}
+
+.roadmap-item.completed::before {
+  border-color: #22c55e;
+  background: #22c55e;
+  box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+}
+
+.roadmap-item.in-progress::before {
+  border-color: #6366f1;
+  background: #6366f1;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+}
+
+.roadmap-item::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 17px;
+  bottom: -30px;
+  width: 2px;
+  background: rgba(255,255,255,0.1);
+  z-index: 1;
+}
+
+.roadmap-item:last-child::after {
+  display: none;
+}
+
+/* Skill Bars Comparativas */
+.skill-track {
+  height: 6px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 3px;
+  position: relative;
+  margin-top: 8px;
+}
+
+.skill-user {
+  height: 100%;
+  background: #6366f1;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.skill-required {
+  height: 100%;
+  background: rgba(255,255,255,0.2);
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}

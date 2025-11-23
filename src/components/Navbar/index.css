@@ -1,0 +1,90 @@
+/* Navbar.css */
+
+/* Fundo de vidro fixo no topo */
+.navbar-glass {
+  background: rgba(15, 23, 42, 0.8) !important; /* Fundo escuro translúcido */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+/* Links de Navegação */
+.nav-link-custom {
+  color: #94a3b8 !important; /* Text secondary */
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.nav-link-custom:hover {
+  color: #fff !important;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Estado Ativo (Página Atual) */
+.nav-link-custom.active {
+  color: #fff !important;
+  background: rgba(99, 102, 241, 0.15); /* Primary glow bg */
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.1);
+}
+
+.nav-link-custom.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background: #6366f1; /* Primary color */
+  border-radius: 2px;
+}
+
+/* Badges de Gamificação */
+.gamification-box {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 4px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.badge-neon-level {
+  color: #fbbf24; /* Amber/Gold */
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.badge-neon-xp {
+  color: #a5b4fc; /* Indigo light */
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  padding-left: 10px;
+}
+
+/* Botão de Logout */
+.btn-logout {
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.btn-logout:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: #fca5a5;
+  box-shadow: 0 0 10px rgba(239, 68, 68, 0.2);
+}
+
+/* Custom Toggler para Mobile */
+.navbar-dark .navbar-toggler {
+  border-color: rgba(255,255,255,0.1);
+}

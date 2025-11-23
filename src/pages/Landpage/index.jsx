@@ -1,4 +1,3 @@
-// Landpage.jsx
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './index.css';
@@ -210,12 +209,15 @@ export default function Landpage() {
           <div className="glass-card p-1 rounded-5 overflow-hidden shadow-lg">
             <div className="row g-0 align-items-center">
               <div className="col-lg-7">
+                {/* Container da proporção de vídeo (16:9) */}
                 <div className="ratio ratio-16x9 bg-black rounded-start-5">
-                  {/* Placeholder visualmente agradável para o vídeo */}
-                  <div className="d-flex align-items-center justify-content-center flex-column h-100 bg-dark text-white">
-                    <i className="bi bi-play-circle-fill display-1 text-white opacity-75 mb-3"></i>
-                    <span className="fw-light text-white-50">Video Pitch Presentation</span>
-                  </div>
+                  <iframe 
+                    src="https://www.youtube.com/embed/3HtdhiPbSrI?rel=0" 
+                    title="NovusPath Video Pitch" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowFullScreen
+                    style={{ border: 0 }}
+                  ></iframe>
                 </div>
               </div>
               <div className="col-lg-5 p-5">

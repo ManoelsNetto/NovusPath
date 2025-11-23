@@ -106,6 +106,12 @@ export default function Login() {
                 <span><i className="bi bi-box-arrow-in-right me-2"></i> Acessar Plataforma</span>
             )}
           </button>
+
+          <p className="text-center text-muted small mb-0">
+
+            Não precisa de cadastro - apenas entre com qualquer email!
+
+          </p>
         
         {/*
           <p className="text-center text-secondary small mb-0">
